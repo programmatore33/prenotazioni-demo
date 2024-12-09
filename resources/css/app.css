@@ -1,0 +1,62 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import 'components/base-action';
+@import 'components/base-confirm';
+@import 'components/base-dialog';
+@import 'components/bb-spinner';
+@import 'components/bb-button';
+@import 'components/bb-table';
+@import 'components/base-table';
+@import 'components/base-navigation';
+
+
+@layer components {
+  .h1 {
+    @apply text-[24px] leading-[28px] md:text-[36px] md:leading-[40px] font-medium font-poppins;
+  }
+
+  .h2 {
+    @apply text-[20px] leading-[30px] md:text-[26px] md:leading-[38px] font-semibold font-poppins;
+  }
+
+  .h3 {
+    @apply text-[18px] leading-[26px] md:text-[22px] md:leading-[26px] font-semibold font-poppins;
+  }
+
+  .h4 {
+    @apply text-[16px] leading-[24px] md:text-[18px] md:leading-[28px] font-semibold font-poppins;
+  }
+
+  .h5 {
+    @apply text-[14px] leading-[21px] md:text-[16px] md:leading-[24px] font-semibold font-poppins;
+  }
+
+  .h6 {
+    @apply text-[12px] leading-[16px] md:text-[14px] md:leading-[18px] font-semibold font-poppins;
+  }
+
+  .paragraph {
+    @apply text-[14px] leading-[18px] md:text-[14px] md:font-normal font-poppins;
+  }
+
+  .paragraph-small {
+    @apply text-[12px] leading-[16px] md:text-[14px] md:leading-[21px] font-light font-poppins;
+  }
+
+  .paragraph-extrasmall {
+    @apply text-[10px] leading-[16px] md:text-[12px] md:leading-[16px] font-medium font-poppins;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  @apply absolute inset-0 top-[68px] md:top-0;
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

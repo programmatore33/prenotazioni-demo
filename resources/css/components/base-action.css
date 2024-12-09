@@ -1,0 +1,10 @@
+.base-action {
+  @apply w-7 h-7 inline-flex items-center justify-center rounded-md text-gray-400 hover:bg-primary-100 hover:text-primary transition-all;
+  & .base-action__label {
+    @apply sr-only;
+  }
+
+  &:disabled {
+    @apply opacity-40 hover:text-gray-400 hover:bg-transparent;
+  }
+}

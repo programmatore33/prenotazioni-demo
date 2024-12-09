@@ -1,0 +1,281 @@
+.bb-btn {
+  @apply inline-flex items-center justify-center border border-[rgba(0,0,0,0)] transition-colors focus:outline-none focus:ring font-poppins;
+
+  &--sm {
+    @apply py-1 px-3 text-xs;
+  }
+  &--md {
+    @apply py-[7px] px-5 leading-5 text-sm;
+  }
+  &--lg {
+    @apply py-[9px] px-5 leading-5;
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+  }
+
+  &--icon {
+    @apply p-0 inline-grid place-content-center rounded-full;
+
+    &.bb-btn--sm {
+      @apply h-[32px] w-[32px];
+    }
+    &.bb-btn--md {
+      @apply h-[36px] w-[36px];
+    }
+    &.bb-btn--lg {
+      @apply h-[40px] w-[40px];
+    }
+  }
+
+  &--icon-squared {
+    @apply inline-grid place-content-center !rounded-lg;
+
+    &.bb-btn--sm {
+      @apply h-[32px] w-[32px];
+    }
+    &.bb-btn--md {
+      @apply h-[36px] w-[36px];
+    }
+    &.bb-btn--lg {
+      @apply h-[40px] w-[40px];
+    }
+  }
+
+  &--rounded {
+    @apply rounded-[51px];
+
+    &.bb-btn--sm {
+    }
+    &.bb-btn--md {
+    }
+    &.bb-btn--lg {
+    }
+  }
+
+  &--primary {
+    @apply bg-primary text-white;
+
+    &:hover,
+    &:focus {
+      @apply bg-primary-700;
+    }
+
+    &.bb-btn--outline {
+      @apply bg-white text-primary border-primary;
+
+      &:hover,
+      &:focus {
+        @apply bg-primary text-white;
+      }
+
+      &.bb-btn--disabled {
+        @apply bg-white text-primary-200 border-primary-100;
+      }
+    }
+    &.bb-btn--disabled {
+      @apply bg-primary-50 text-primary-200;
+    }
+  }
+  &--primary-light {
+    @apply bg-primary-100 text-primary;
+
+    &:hover,
+    &:focus {
+      @apply bg-primary-200;
+    }
+
+    &.bb-btn--disabled {
+      @apply bg-primary-50 text-primary-200;
+    }
+  }
+  &--alert {
+    @apply bg-alert-400 text-white;
+
+    &:hover,
+    &:focus {
+      @apply bg-alert-500;
+    }
+
+    &.bb-btn--outline {
+      @apply bg-white text-alert-400 border-alert-400;
+
+      &:hover,
+      &:focus {
+        @apply bg-alert-400 text-white;
+      }
+    }
+  }
+
+  &.bb-btn--white {
+    @apply bg-white text-primary;
+
+    &:hover {
+      @apply bg-primary text-white;
+    }
+
+    &:focus {
+      @apply bg-white border-primary text-primary;
+    }
+
+    &.bb-btn--disabled {
+      @apply bg-white text-primary-200;
+    }
+  }
+
+  &.bb-btn--tertiary {
+    @apply bg-grey-100 text-grey-700;
+
+    &:hover {
+      @apply bg-grey-200;
+    }
+    &:focus {
+      @apply bg-grey-100 border-grey-600 ring-grey-200;
+    }
+    &.bb-btn--disabled {
+      @apply bg-white text-grey-200 border-grey-100;
+    }
+  }
+
+  &.bb-btn--link {
+    @apply bg-white text-primary;
+
+    &:hover {
+      @apply underline;
+    }
+    &:focus {
+      @apply text-primary-800 ring-0;
+    }
+    &.bb-btn--disabled {
+      @apply bg-white text-primary-200;
+    }
+  }
+
+  &.bb-btn--inline {
+    @apply rounded-md;
+
+    &.bb-btn {
+      &--sm {
+      }
+      &--md {
+        @apply px-2 py-1 text-sm font-normal font-sans;
+      }
+      &--lg {
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @apply bg-primary-100 text-primary;
+    }
+
+    &:active {
+      @apply bg-primary-200 text-primary;
+    }
+    &.bb-btn--disabled {
+      @apply text-gray-300 hover:text-gray-300 bg-white hover:bg-white !border-current;
+    }
+  }
+
+  &.bb-btn--inline-primary {
+    @apply bg-primary-500 text-white rounded-md border-primary-500 border;
+
+    &.bb-btn {
+      &--sm {
+      }
+      &--md {
+        @apply px-2 py-1 text-sm font-normal font-sans;
+      }
+      &--lg {
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @apply bg-primary-100 text-primary;
+    }
+
+    &:active {
+      @apply bg-primary-200 text-primary;
+    }
+    &.bb-btn--disabled {
+      @apply text-gray-300 hover:text-gray-300 bg-white hover:bg-white !border-current;
+    }
+  }
+
+  &.bb-btn--inline-tertiary {
+    @apply bg-white text-grey-500 rounded-[4px] border border-grey-400;
+
+    &.bb-btn {
+      &--sm {
+      }
+      &--md {
+        @apply px-2 py-1 text-sm font-normal font-sans;
+      }
+      &--lg {
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @apply border-primary bg-primary-50 text-primary;
+    }
+
+    &:active {
+      @apply bg-primary-200 text-primary;
+    }
+    &.bb-btn--disabled {
+      @apply text-gray-300 hover:text-gray-300 bg-white hover:bg-white !border-current;
+    }
+  }
+
+  &.bb-btn--inline-reverse-primary {
+    @apply bg-primary-50 text-primary-500 rounded-md border-primary-500 border;
+
+    &.bb-btn {
+      &--sm {
+      }
+      &--md {
+        @apply px-2 py-1 text-sm font-normal font-sans;
+      }
+      &--lg {
+      }
+    }
+
+    &:hover,
+    &:focus {
+      @apply bg-primary-500 text-white;
+    }
+
+    &:active {
+      @apply bg-primary-200 text-primary;
+    }
+    &.bb-btn--disabled {
+      @apply text-gray-300 hover:text-gray-300 bg-white hover:bg-white !border-current;
+    }
+  }
+
+  &.bb-btn--disabled {
+    @apply pointer-events-none;
+
+    &:hover,
+    &:focus {
+      @apply bg-grey-200 text-grey-400 border-gray-200;
+    }
+  }
+
+  .bb-spinner {
+    max-width: 0px;
+    margin-right: 0px;
+    transition: max-width 0.3s;
+  }
+
+  &--loading {
+    .bb-spinner {
+      max-width: 20px;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.base-confirm {
+  @apply rounded-lg focus:outline-none;
+  .bb-base-dialog__panel {
+    @apply focus:outline-none;
+  }
+
+  .bb-base-dialog__header {
+    @apply items-center px-10 min-h-[65px] text-2xl font-poppins text-primary-800 border-0;
+  }
+
+  .bb-base-dialog__body {
+    @apply border-t-0;
+  }
+  .bb-base-confirm__content {
+    @apply flex flex-col gap-y-5 px-10 pb-8 !pt-0;
+  }
+  .bb-base-confirm-subtitle {
+    @apply font-poppins text-xl;
+  }
+  .bb-base-dialog__footer:not(:empty) {
+    @apply flex justify-end gap-x-3 px-10 py-4 border-t border-grey-300 p-5;
+  }
+}

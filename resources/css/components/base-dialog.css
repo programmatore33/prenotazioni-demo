@@ -1,0 +1,121 @@
+.bb-base-dialog {
+  &--transition-fade {
+    &.bb-base-dialog__overlay {
+      transition-property: opacity;
+    }
+    &.bb-base-dialog--opening {
+      &.bb-base-dialog__overlay {
+        @apply opacity-100;
+      }
+    }
+    &.bb-base-dialog--open {
+      &.bb-base-dialog__overlay {
+        @apply opacity-100;
+      }
+    }
+    &.bb-base-dialog--closing {
+      &.bb-base-dialog__overlay {
+        @apply opacity-0;
+      }
+    }
+    &.bb-base-dialog--closed {
+      &.bb-base-dialog__overlay {
+        @apply opacity-0;
+      }
+    }
+  }
+
+  &--closed {
+    &.bb-base-dialog__overlay {
+      @apply invisible -z-10;
+    }
+  }
+
+  &--fullscreen {
+    &.bb-base-dialog__overlay {
+      @apply p-0;
+    }
+
+    .bb-base-dialog__panel {
+      @apply h-full w-full max-h-screen  my-0;
+    }
+
+    .bb-base-dialog__content {
+      @apply !h-full rounded-none;
+    }
+  }
+
+  &--compact {
+    .bb-base-dialog__content {
+      @apply pt-0;
+    }
+  }
+
+  &__overlay {
+    @apply fixed z-10 inset-0 bg-[rgba(0,0,0,0.5)] ease-in-out p-2;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+  &__panel {
+    position: relative;
+    width: auto;
+    height: calc(100% - 20px);
+    pointer-events: none;
+    @apply flex items-center relative rounded-lg mx-auto;
+  }
+
+  &__content {
+    @apply max-h-full overflow-hidden relative flex flex-col w-full bg-white bg-clip-padding outline-0 pointer-events-auto rounded-lg;
+    transition: height 0.5s;
+  }
+  &__header {
+    @apply flex shrink-0 items-center justify-between gap-x-3 px-8 py-7 border-b;
+  }
+  &__title {
+    font-size: calc(1rem + 0.25vw);
+    line-height: calc(1rem + 0.25vw);
+    @apply font-poppins font-bold text-primary-600;
+  }
+  &-close {
+    @apply inline-flex items-center;
+
+    button {
+      @apply inline-flex;
+    }
+
+    &__content {
+      @apply inline-flex;
+    }
+    &__label {
+      @apply sr-only;
+    }
+    &__icon {
+      @apply inline-flex;
+    }
+  }
+  &__body {
+    @apply flex-auto relative overflow-y-auto pointer-events-auto;
+
+    &::-webkit-scrollbar {
+      width: 0px; /* Mostly for vertical scrollbars */
+      height: 0px; /* Mostly for horizontal scrollbars */
+    }
+  }
+  &__description {
+  }
+  &__footer {
+    @apply px-8 pointer-events-auto;
+  }
+}
+
+.prevent-overscroll {
+  /* when modal active */
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overflow: hidden;
+  /* Other browsers */
+  overscroll-behavior: none;
+}

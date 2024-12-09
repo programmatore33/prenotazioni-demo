@@ -1,0 +1,81 @@
+@layer components {
+  /*.custom-table-container {
+    .bb-base-table {
+      table {
+        th {
+          @apply py-2 px-0 border-0 !important;
+        }
+      }
+    }
+  }
+
+      tbody {
+        td {
+          @apply px-0 !important;
+        }
+      }
+    }
+  }
+}
+*/
+
+  .lot-notes-table-container {
+    @apply border-0 !important;
+
+    thead {
+      @apply hidden;
+    }
+
+    tbody {
+      tr {
+        td {
+          @apply px-0 py-4 !important;
+        }
+      }
+    }
+  }
+
+  .lot-logs-table-container {
+    @apply border-0 rounded-none !important;
+
+    thead {
+      @apply capitalize bg-transparent !important;
+
+      th {
+        @apply px-0 py-2 text-xs border-0 !important;
+      }
+    }
+
+    tbody {
+      tr {
+        &:last-child {
+          td {
+            @apply border-b !important;
+          }
+        }
+
+        td {
+          @apply py-0 h-10 px-0 !important;
+        }
+      }
+    }
+  }
+
+  .table-style-2 {
+    .bb-base-table {
+      @apply bg-white border-primary-200;
+
+      thead {
+        @apply bg-primary-100 normal-case;
+      }
+
+      th {
+        @apply py-2 text-primary-400 border-primary-200;
+      }
+
+      td {
+        @apply py-2 border-r-0 border-primary-200;
+      }
+    }
+  }
+}
